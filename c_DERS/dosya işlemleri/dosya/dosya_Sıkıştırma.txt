@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <conio.h>
+
+int main(){
+    FILE *read,*write;
+    int a,b;
+    unsigned char c;
+    
+    read = fopen("A.txt","r");
+    write = fopen("B.txt","w");
+    
+          while(!feof(read)){
+                             fscanf(read,"%d%d",&a,&b);
+                             c = (a<<4)|b;
+                             fprintf(write,"%c",c);
+                             }
+          fclose(read);
+          fclose(write);
+          getch();
+          return 0;
+          }
